@@ -6,7 +6,7 @@ import { clientService } from 'web-pkg/src/services'
 import { buildResource, buildSpace, buildWebDavSpacesPath } from '../../helpers/resources'
 
 export class FolderLoaderProject implements FolderLoader {
-  public isEnabled(router: Router): boolean {
+  public isActive(router: Router): boolean {
     return isLocationSpacesActive(router, 'files-spaces-project')
   }
 

@@ -6,7 +6,7 @@ import { isLocationCommonActive } from '../../router'
 import { buildDeletedResource, buildResource } from '../../helpers/resources'
 
 export class FolderLoaderTrashbin implements FolderLoader {
-  public isEnabled(router: Router): boolean {
+  public isActive(router: Router): boolean {
     return isLocationCommonActive(router, 'files-common-trash')
   }
 

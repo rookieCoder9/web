@@ -5,7 +5,7 @@ import { isLocationSharesActive } from '../../router'
 import { aggregateResourceShares } from '../../helpers/resources'
 
 export class FolderLoaderSharedViaLink implements FolderLoader {
-  public isEnabled(router: Router): boolean {
+  public isActive(router: Router): boolean {
     return isLocationSharesActive(router, 'files-shares-via-link')
   }
 
