@@ -3,8 +3,14 @@ import Router from 'vue-router'
 import { useTask } from 'vue-concurrency'
 import { isLocationSharesActive } from '../../router'
 import { aggregateResourceShares } from '../../helpers/resources'
+import { Store } from 'vuex'
 
 export class FolderLoaderSharedWithOthers implements FolderLoader {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public isEnabled(store: Store<any>): boolean {
+    return true
+  }
+
   public isActive(router: Router): boolean {
     return isLocationSharesActive(router, 'files-shares-with-others')
   }

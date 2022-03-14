@@ -88,7 +88,7 @@ import { basename, join } from 'path'
 import PQueue from 'p-queue'
 import { createLocationSpaces } from '../router'
 import { useResourcesViewDefaults } from '../composables'
-import { fetchResources } from '../services/folder/loaderPersonal'
+import { fetchResources } from '../services/folder/legacy/loaderPersonal'
 
 const visibilityObserver = new VisibilityObserver()
 

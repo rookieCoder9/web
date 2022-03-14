@@ -4,8 +4,14 @@ import { useTask } from 'vue-concurrency'
 import { DavProperties } from 'web-pkg/src/constants'
 import { isLocationCommonActive } from '../../router'
 import { buildDeletedResource, buildResource } from '../../helpers/resources'
+import { Store } from 'vuex'
 
 export class FolderLoaderTrashbin implements FolderLoader {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public isEnabled(store: Store<any>): boolean {
+    return true
+  }
+
   public isActive(router: Router): boolean {
     return isLocationCommonActive(router, 'files-common-trash')
   }
